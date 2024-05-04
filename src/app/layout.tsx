@@ -1,22 +1,22 @@
-import type { Metadata } from 'next';
+'use client';
+import Navbar from '@/components/Navbar';
+import { useThemeStore } from '@/zustand/themeStore';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-    title: 'Portfolio',
-    description: 'Meychin Portfolio'
-};
 
 export default function RootLayout({
     children
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const theme = useThemeStore((state: any) => state.theme);
+
     return (
-        <html lang='en'>
+        <html lang='en' data-theme={theme}>
             <body className={inter.className}>
+                <Navbar />
                 <main className='max-w-5xl mx-auto text-2xl pt-4 h-screen'>
                     {children}
                 </main>
