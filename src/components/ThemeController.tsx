@@ -7,7 +7,7 @@ function ThemeController() {
     const setTheme = useThemeStore((state: any) => state.setTheme);
 
     return (
-        <label className='swap swap-rotate'>
+        <label className='swap swap-rotate px-4'>
             {theme === 'dark' ? (
                 <div onClick={(e) => setTheme('light')}>
                     <SunLight />
