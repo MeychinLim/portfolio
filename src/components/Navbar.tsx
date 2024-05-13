@@ -5,7 +5,7 @@ function Navbar() {
     const router = useRouter();
 
     return (
-        <div className='sticky top-0 w-full font-mono shadow-lg'>
+        <div className='sticky top-0 w-full font-mono shadow-lg z-50'>
             <div className='navbar bg-base-100'>
                 <div className='navbar-start'>
                     <a
