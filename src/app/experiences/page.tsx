@@ -1,3 +1,4 @@
+'use client';
 import { CheckCircleSolid } from 'iconoir-react';
 
 function Page() {
@@ -100,7 +101,10 @@ function Page() {
                             </div>
                             <div className='flex flex-wrap gap-2 pt-4'>
                                 {experience?.skills.map((skill, index) => (
-                                    <span className='text-xs px-3 py-1 bg-accent rounded-xl'>
+                                    <span
+                                        className='text-xs px-3 py-1 bg-accent rounded-xl'
+                                        key={index}
+                                    >
                                         {skill}
                                     </span>
                                 ))}
