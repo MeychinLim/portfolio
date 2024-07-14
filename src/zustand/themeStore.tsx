@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
 export const useThemeStore = create((set) => ({
-    theme: 'winter',
+    theme: 'dim',
     setTheme: (value: string) => set({ theme: value })
 }));

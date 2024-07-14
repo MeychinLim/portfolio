@@ -18,7 +18,7 @@ export default function RootLayout({
         <html lang='en' data-theme={theme}>
             <body className={inter.className}>
                 <Navbar />
-                <main className='max-w-5xl mx-auto text-2xl p-4 md:pt-4 mb-52 mt-10'>
+                <main className='text-2xl p-4 md:pt-4 mb-52 mt-10 font-mono text-gray-400'>
                     {children}
                 </main>
                 <Footer />

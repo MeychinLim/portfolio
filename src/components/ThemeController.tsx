@@ -9,7 +9,7 @@ function ThemeController() {
     return (
         <label className='swap swap-rotate px-4'>
             {theme === 'dim' ? (
-                <div onClick={(e) => setTheme('winter')}>
+                <div onClick={(e) => setTheme('nord')}>
                     <SunLight />
                 </div>
             ) : (
