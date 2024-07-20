@@ -20,8 +20,11 @@ function Skill() {
 
     return (
         <div className='grid grid-cols-4 gap-10'>
-            {skills.map((skill) => (
-                <div className='grid grid-cols-1 justify-between items-center bg-gray-300/40 p-12 shadow-lg rounded-2xl justify-items-center h-52'>
+            {skills.map((skill, index) => (
+                <div
+                    key={index}
+                    className='grid grid-cols-1 justify-between items-center bg-gray-300/40 p-12 shadow-lg rounded-2xl justify-items-center h-52'
+                >
                     <img
                         src={`/img/${skill?.logo}`}
                         alt={skill?.name}
