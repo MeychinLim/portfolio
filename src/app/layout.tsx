@@ -1,6 +1,7 @@
 'use client';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import SocialMedia from '@/components/SocialMedia';
 import { useThemeStore } from '@/zustand/themeStore';
 import { Inter } from 'next/font/google';
 import '../styles/globals.css';
@@ -17,6 +18,7 @@ export default function RootLayout({
     return (
         <html lang='en' data-theme={theme}>
             <body className={inter.className}>
+                <SocialMedia />
                 <Navbar />
                 <main className='text-2xl p-4 md:pt-4 mb-52 mt-10 font-mono text-gray-400'>
                     {children}
