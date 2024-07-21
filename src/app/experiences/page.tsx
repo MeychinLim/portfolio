@@ -1,5 +1,7 @@
 'use client';
-import { CheckCircleSolid } from 'iconoir-react';
+import ExperienceTimeLineTemplate1 from '@/components/Project/ExperienceTimeLineTemplate1';
+import ExperienceTimeLineTemplate2 from '@/components/Project/ExperienceTimeLineTemplate2';
+import ExperienceTimeLineTemplate3 from '@/components/Project/ExperienceTimeLineTemplate3';
 
 function Page() {
     const experiences = [
@@ -7,13 +9,15 @@ function Page() {
             title: 'Software Developer',
             company: 'Cambodia Securities Exchange',
             duration: 'September 2023 - Present',
+            titleTimeline: 'timeline-start',
+            detailTimeLine: 'timeline-end',
             skills: [
+                'TypeScript',
                 'ReactJs',
                 'NextJs',
                 'SpringBoot',
-                'Java',
-                'Flutter',
-                'TypeScript'
+                // 'Java',
+                'Flutter'
             ],
             responsibilities: [
                 'Implement new feature base on client requirement.',
@@ -29,7 +33,15 @@ function Page() {
             title: 'Junior Web Developer',
             company: 'Asia Pacific Property Appraisal',
             duration: 'March 2022 - September 2023',
-            skills: ['VueJs', 'NuxtJs', 'Tailwind', 'PHP', 'Laravel'],
+            titleTimeline: 'timeline-end',
+            detailTimeLine: 'timeline-end md:timeline-start md:text-end',
+            skills: [
+                // 'VueJs',
+                'NuxtJs',
+                'Laravel',
+                'Tailwind'
+                //  'PHP',
+            ],
             responsibilities: [
                 'Develop feature base on task assigned by Supervisor.',
                 'Create responsive UI using NuxtJs & Tailwind.',
@@ -44,6 +56,8 @@ function Page() {
             title: 'Assistant General Manager & Operation',
             company: 'Tatsumi Shokai Cambodia',
             duration: 'May 2021 - March 2022',
+            titleTimeline: 'timeline-start',
+            detailTimeLine: 'timeline-end',
             skills: ['Team Work', 'Management'],
             responsibilities: [
                 'Prepare daily, weekly and monthly reports for manager.',
@@ -56,6 +70,8 @@ function Page() {
             title: 'Administrator',
             company: 'Tatsumi Shokai Cambodia',
             duration: 'June 2020 - May 2021',
+            titleTimeline: 'timeline-end',
+            detailTimeLine: 'timeline-end md:timeline-start md:text-end',
             skills: ['Communication'],
             responsibilities: [
                 'Control daily purchase requests.',
@@ -67,55 +83,7 @@ function Page() {
         }
     ];
 
-    return (
-        <div className='container mx-auto'>
-            <ul className='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'>
-                {experiences.map((experience, index) => (
-                    <li key={index}>
-                        <div className='timeline-middle'>
-                            <CheckCircleSolid className='h-5 w-5' />
-                        </div>
-                        <time className=' italic text-lg md:text-xl mt-7 px-2 text-end w-full hidden md:block'>
-                            {experience?.duration}
-                        </time>
-                        <div className='timeline-end mb-10'>
-                            <time className=' italic text-lg md:text-xl block md:hidden'>
-                                {experience?.duration}
-                            </time>
-                            <div className='text-lg md:text-xl italic'>
-                                {experience?.company}
-                            </div>
-                            <div className='text-base md:text-lg font-black'>
-                                {experience?.title}
-                            </div>
-                            <div className='text-sm md:text-base pt-4'>
-                                <ul className='list-disc pl-12'>
-                                    {experience?.responsibilities.map(
-                                        (responsibility, index) => (
-                                            <li key={index}>
-                                                {responsibility}
-                                            </li>
-                                        )
-                                    )}
-                                </ul>
-                            </div>
-                            <div className='flex flex-wrap gap-2 pt-4'>
-                                {experience?.skills.map((skill, index) => (
-                                    <span
-                                        className='text-xs px-3 py-1 bg-warning rounded-xl text-gray-800'
-                                        key={index}
-                                    >
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                        <hr />
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+    return <ExperienceTimeLineTemplate3 experiences={experiences} />;
 }
 
 export default Page;
