@@ -19,7 +19,9 @@ export default function RootLayout({
     return (
         <html lang='en' data-theme={theme}>
             <body className={inter.className}>
-                <SocialMedia />
+                <div className='hidden md:block'>
+                    <SocialMedia />
+                </div>
                 <ScrollToTop />
                 <Navbar />
                 <main className='text-2xl p-4 md:pt-4 mb-52 mt-10 font-mono text-gray-400'>
