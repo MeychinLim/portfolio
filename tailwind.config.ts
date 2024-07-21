@@ -10,7 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 100s linear infinite',
+        marquee: 'marquee 20s linear infinite',
+        marquee2: 'marquee2 20s linear infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0%)' },
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
