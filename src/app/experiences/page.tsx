@@ -82,11 +82,7 @@ function Page() {
         }
     ];
 
-    return (
-        <div className='mt-10'>
-            <ExperienceTimeLineTemplate experiences={experiences} />
-        </div>
-    );
+    return <ExperienceTimeLineTemplate experiences={experiences} />;
 }
 
 export default Page;

@@ -16,6 +16,7 @@ const config: Config = {
         float: 'float 3s ease-in-out infinite',
         slideInRight: 'slideInRight 1100ms ease-out forwards',
         slideInLeft: 'slideInLeft 1100ms ease-out forwards',
+        slideInUp: 'slideInUp 1100ms ease-out forwards',
       },
       keyframes: {
         marquee: {
@@ -41,6 +42,10 @@ const config: Config = {
         slideInLeft: {
           '0%': { transform: 'translateX(-50%)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideInUp: {
+          '0%': { transform: 'translateY(50%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
       backgroundImage: {

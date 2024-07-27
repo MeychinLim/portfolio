@@ -33,47 +33,34 @@ function Page() {
     ];
 
     return (
-        <div className='container mx-auto'>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+        <div className='max-w-6xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-slideInUp'>
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className='bg-gradient-to-b from-transparent to-primary rounded-2xl p-0.5 shadow-md hover:shadow-xl hover:-translate-y-1 delay-150 duration-150'
+                        className='bg-gradient-to-b from-transparent to-accent rounded-2xl p-0.5 shadow-md group hover:shadow-xl hover:scale-105 duration-500'
                     >
                         <div
-                            className='card bg-base-100 h-full'
+                            className='card bg-base-100 h-full rounded-2xl group-hover:cursor-pointer'
                             onClick={() =>
                                 router.push(`/projects/${project?.id}`)
                             }
                         >
                             <figure>
-                                <img
-                                    src='https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'
-                                    alt='Shoes'
-                                />
+                                <img src='/cover2.png' alt='Shoes' />
                             </figure>
                             <div className='card-body p-6 gap-4'>
                                 <h2 className='card-title'>
-                                    {project?.name}
-                                    <div className='badge badge-primary text-xs'>
+                                    <div className='group-hover:text-accent duration-500 whitespace-nowrap w-4/5 truncate'>
+                                        {project?.name}
+                                    </div>
+                                    <div className='badge badge-primary text-xs group-hover:animate-wiggle'>
                                         {project?.status}
                                     </div>
                                 </h2>
                                 <p className='text-sm'>
                                     {project?.descriptions}
                                 </p>
-                                <div className='card-actions justify-end'>
-                                    {project?.technologies.map(
-                                        (technology, index) => (
-                                            <div
-                                                key={index}
-                                                className='badge badge-outline'
-                                            >
-                                                {technology}
-                                            </div>
-                                        )
-                                    )}
-                                </div>
                             </div>
                         </div>
                     </div>
