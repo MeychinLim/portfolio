@@ -1,17 +1,13 @@
 'use client';
 
 import { ArrowRightCircle } from 'iconoir-react';
-import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 
 function ProjectCard() {
     const router = useRouter();
 
     return (
-        <motion.div
-            // whileHover={{ scale: 1.05, animationDelay: 3 }}
-            className='group grid grid-cols-2 gap-10 rounded-2xl'
-        >
+        <div className='group grid grid-cols-2 gap-10 rounded-2xl'>
             <div className='group-hover:scale-105 transition-transform duration-700'>
                 <img src={`/cover2.png`} className='rounded-2xl' />
             </div>
@@ -35,7 +31,7 @@ function ProjectCard() {
                     </button>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
