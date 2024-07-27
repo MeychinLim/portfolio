@@ -12,6 +12,7 @@ const config: Config = {
       animation: {
         marquee: 'marquee 20s linear infinite',
         marquee2: 'marquee2 20s linear infinite',
+        float: 'float 3s ease-in-out infinite',
       },
       keyframes: {
         marquee: {
@@ -21,6 +22,10 @@ const config: Config = {
         marquee2: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0%)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
       },
       backgroundImage: {
