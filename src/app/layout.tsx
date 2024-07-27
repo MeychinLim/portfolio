@@ -24,7 +24,7 @@ export default function RootLayout({
                 </div>
                 <ScrollToTop />
                 <Navbar />
-                <main className='text-2xl p-4 md:pt-4 mb-52 mt-10 font-mono text-gray-400'>
+                <main className='text-2xl p-4 md:pt-4 md:mb-24 md:mt-10 font-mono text-gray-400 min-h-[72vh]'>
                     {children}
                 </main>
                 <Footer />
