@@ -4,16 +4,16 @@ type Props = {
     experiences: any;
 };
 
-const ExperienceTimeLineTemplate3 = ({ experiences }: Props) => {
+const ExperienceTimeLineTemplate = ({ experiences }: Props) => {
     return (
         <div className='mx-auto max-w-6xl'>
             {experiences.map((experience: any, index: number) => (
-                <div key={index} className='flex w-full md:gap-x-4 mb-10'>
-                    <div className='hidden md:block text-end md:w-1/3 xl:text-nowrap'>
-                        <strong className='text-base md:text-lg block'>
+                <div key={index} className='flex w-full md:gap-x-4 mb-10 group'>
+                    <div className='hidden md:block text-end md:w-1/3 xl:text-nowrap group-hover:translate-x-5 transform duration-500 animate-slideInLeft'>
+                        <strong className='text-base md:text-lg block group-hover:translate-y-8 duration-500 transform'>
                             {experience?.company}
                         </strong>
-                        <div className='text-xs md:text-sm lg:text-base text-info/60 italic'>
+                        <div className='text-xs md:text-sm lg:text-base text-info/60 italic group-hover:-translate-y-6 duration-500 transform'>
                             {experience?.duration}
                         </div>
                     </div>
@@ -24,16 +24,16 @@ const ExperienceTimeLineTemplate3 = ({ experiences }: Props) => {
                         </div>
                     </div>
 
-                    <div className='w-full md:w-2/3'>
+                    <div className='w-full md:w-2/3 group-hover:-translate-x-5 transform duration-500 animate-slideInRight'>
                         <div className='block md:hidden pb-2'>
-                            <strong className='text-base md:text-lg block'>
+                            <strong className='text-base md:text-lg block group-hover:translate-y-6 duration-500 transform'>
                                 {experience?.company}
                             </strong>
-                            <div className='text-xs md:text-sm lg:text-base text-info/60 italic'>
+                            <div className='text-xs md:text-sm lg:text-base text-info/60 italic group-hover:-translate-y-4 duration-500 transform'>
                                 {experience?.duration}
                             </div>
                         </div>
-                        <strong className='text-accent text-base sm:text-lg md:text-xl lg:text-2xl mb-4 block'>
+                        <strong className='text-accent text-base sm:text-lg md:text-xl lg:text-2xl mb-4 block group-hover:text-info group-hover:scale-105 transform duration-500'>
                             {experience?.title}
                         </strong>
                         <ul className='list-disc text-xs md:text-sm lg:text-base pl-4'>
@@ -64,4 +64,4 @@ const ExperienceTimeLineTemplate3 = ({ experiences }: Props) => {
     );
 };
 
-export default ExperienceTimeLineTemplate3;
+export default ExperienceTimeLineTemplate;

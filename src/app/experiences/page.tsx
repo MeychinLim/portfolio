@@ -1,7 +1,6 @@
 'use client';
-import ExperienceTimeLineTemplate1 from '@/components/Project/ExperienceTimeLineTemplate1';
-import ExperienceTimeLineTemplate2 from '@/components/Project/ExperienceTimeLineTemplate2';
-import ExperienceTimeLineTemplate3 from '@/components/Project/ExperienceTimeLineTemplate3';
+
+import ExperienceTimeLineTemplate from '@/components/Project/ExperienceTimeLineTemplate';
 
 function Page() {
     const experiences = [
@@ -83,7 +82,11 @@ function Page() {
         }
     ];
 
-    return <ExperienceTimeLineTemplate3 experiences={experiences} />;
+    return (
+        <div className='mt-10'>
+            <ExperienceTimeLineTemplate experiences={experiences} />
+        </div>
+    );
 }
 
 export default Page;

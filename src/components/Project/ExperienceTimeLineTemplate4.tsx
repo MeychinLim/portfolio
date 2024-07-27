@@ -4,7 +4,7 @@ type Props = {
     experiences: any;
 };
 
-const ExperienceTimeLineTemplate1 = ({ experiences }: Props) => {
+const ExperienceTimeLineTemplate4 = ({ experiences }: Props) => {
     return (
         <div className='mx-auto max-w-5xl'>
             <ul className='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'>
@@ -79,4 +79,4 @@ const ExperienceTimeLineTemplate1 = ({ experiences }: Props) => {
     );
 };
 
-export default ExperienceTimeLineTemplate1;
+export default ExperienceTimeLineTemplate4;
