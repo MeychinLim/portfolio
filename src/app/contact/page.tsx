@@ -30,7 +30,6 @@ function Page() {
                         <Mail className='duration-500 text-primary/75 group-hover:scale-125' />
                         <a
                             href={`mailto:${contactDetail?.email}`}
-                            target='_blank'
                             className='py-1 text-lg transform duration-500 group-hover:translate-x-3 group-hover:text-primary/75'
                         >
                             {contactDetail?.email}
