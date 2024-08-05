@@ -14,8 +14,9 @@ export default function Home() {
                 <div className='h-[50rem] w-full flex flex-row justify-between mt-32'>
                     <div className='flex flex-col w-1/2 gap-16 mx-20'>
                         <div>
-                            <div className='text-gray-400 text-8xl font-bold'>
-                                Hello!
+                            <div className='text-gray-400 text-8xl font-bold flex flex-row gap-6'>
+                                {/* <div className='animate-wiggle'>👋</div> */}
+                                <span>Hello!</span>
                             </div>
                             <div className='indent-20 text-4xl font-bold text-primary pt-4 hue-rotate-15'>
                                 I'm Meychin Lim
@@ -58,7 +59,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-40 items-center justify-between mx-auto max-w-5xl'>
+            <div className='flex flex-col gap-32 items-center justify-between mx-auto max-w-5xl'>
                 <div className='grid grid-cols-1 gap-y-10'>
                     <label className='flex text-5xl font-semibold justify-center w-full'>
                         Skills

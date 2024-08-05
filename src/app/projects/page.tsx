@@ -7,7 +7,7 @@ function Page() {
 
     const projects = [
         {
-            id: 1,
+            id: '1',
             name: 'E-commerce Website',
             status: 'New',
             descriptions: 'Shopping online with our E-commerce website.',
@@ -15,7 +15,7 @@ function Page() {
             technologies: ['TypeScript', 'NextJS']
         },
         {
-            id: 2,
+            id: '2',
             name: 'Countries List Fetching',
             status: 'New',
             descriptions: 'Fetching countries list from REST Countries API.',
@@ -23,7 +23,7 @@ function Page() {
             technologies: ['NuxtJS 3']
         },
         {
-            id: 3,
+            id: '3',
             name: 'UPS for Coffee Shop',
             status: 'New',
             descriptions: 'App for order coffee and generate receipt from UPS.',
