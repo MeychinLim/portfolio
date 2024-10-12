@@ -1,6 +1,7 @@
 'use client';
 
 import { useMenuStore } from '@/zustand/menuStore';
+import { HomeSimpleDoor } from 'iconoir-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import ThemeController from './ThemeController';
@@ -23,7 +24,7 @@ function Navbar() {
 
     return (
         <nav className='sticky top-0 w-full font-mono shadow-lg z-50 text-white'>
-            <div className='navbar bg-neutral'>
+            <div className='navbar bg-neutral hidden md:flex'>
                 <div className='navbar-start'>
                     <Link
                         href='/'
@@ -33,7 +34,7 @@ function Navbar() {
                         Portfolio
                     </Link>
                 </div>
-                <div className='navbar-center hidden lg:flex'>
+                <div className='navbar-center hidden md:flex'>
                     <ul className='menu menu-horizontal px-1 gap-2'>
                         {menuItem.map((item, index) => (
                             <li key={index}>
@@ -52,6 +53,35 @@ function Navbar() {
                 <div className='navbar-end'>
                     <ThemeController />
                 </div>
+            </div>
+            <div className='bg-neutral flex justify-between items-center px-4 py-2 md:hidden'>
+                <div onClick={() => handleActiveMenu('Home', '/')}>
+                    <HomeSimpleDoor className='w-5 h-5 m-2' />
+                </div>
+                <ul className='menu menu-horizontal'>
+                    <li
+                        className='p-2'
+                        onClick={() =>
+                            handleActiveMenu('Projects', '/projects')
+                        }
+                    >
+                        Project
+                    </li>
+                    <li
+                        className='p-2'
+                        onClick={() =>
+                            handleActiveMenu('Experiences', '/experiences')
+                        }
+                    >
+                        Experience
+                    </li>
+                    <li
+                        className='p-2'
+                        onClick={() => handleActiveMenu('Contact', '/contact')}
+                    >
+                        Context
+                    </li>
+                </ul>
             </div>
         </nav>
     );

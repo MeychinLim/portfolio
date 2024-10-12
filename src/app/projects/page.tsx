@@ -8,27 +8,63 @@ function Page() {
     const projects = [
         {
             id: '1',
-            name: 'E-commerce Website',
-            status: 'New',
-            descriptions: 'Shopping online with our E-commerce website.',
+            name: 'Real Estate For Agents (REA)',
+            status: 'Completed',
+            descriptions:
+                'This project have website and admin. This website help agency to post their properties and detail information from the owner of the properties. For the Admin Web application, we have lots of modules to manage all information related to properties such as Properties, News, Advertisements,...',
             preImage: null,
-            technologies: ['TypeScript', 'NextJS']
+            companyName: 'APPA',
+            technologies: ['NuxtJS 2, Laravel']
         },
         {
             id: '2',
-            name: 'Countries List Fetching',
-            status: 'New',
-            descriptions: 'Fetching countries list from REST Countries API.',
+            name: 'Valuation System (VAS)',
+            status: 'Completed',
+            descriptions:
+                'This project is confidential, cannot be shown in public. However, I can describe it, this system store each properties valuate information for the Valuation Company.',
             preImage: null,
-            technologies: ['NuxtJS 3']
+            companyName: 'APPA',
+            technologies: ['NuxtJS 3, Laravel']
         },
         {
             id: '3',
-            name: 'UPS for Coffee Shop',
-            status: 'New',
-            descriptions: 'App for order coffee and generate receipt from UPS.',
+            name: 'Map Tree System (MTS)',
+            status: 'Completed',
+            descriptions:
+                "This project is confidential, cannot be shown in public. However, I can describe it, this system store all the properties information and show properties's location as Map View.",
             preImage: null,
-            technologies: ['NuxtJs 3', 'Laravel']
+            companyName: 'APPA',
+            technologies: ['Laravel']
+        },
+        {
+            id: '4',
+            name: 'World Counties',
+            status: 'Completed',
+            descriptions:
+                'This project display all countries in the world as a list using REST API from https://restcountries.com/.',
+            preImage: null,
+            companyName: 'Personal',
+            technologies: ['NuxtJs 3']
+        },
+        {
+            id: '5',
+            name: 'Lucky Draw',
+            status: 'Completed',
+            descriptions:
+                'This project is use for Company Event to draw phone number and find the winner in the Event.',
+            preImage: null,
+            companyName: 'CSX',
+            technologies: ['NextJs']
+        },
+        {
+            id: '6',
+            name: 'Data Feed',
+            status: 'Completed',
+            descriptions:
+                "This project is use for provided data graph widget and API to company's clients.",
+            preImage: null,
+            companyName: 'CSX',
+            technologies: ['Laravel']
         }
     ];
 
@@ -59,7 +95,8 @@ function Page() {
                                     </div>
                                 </h2>
                                 <p className='text-sm'>
-                                    {project?.descriptions}
+                                    {project?.descriptions.substring(0, 100)}{' '}
+                                    ...
                                 </p>
                             </div>
                         </div>

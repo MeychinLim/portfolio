@@ -2,7 +2,7 @@
 
 import ProjectCard from '@/components/ProjectCard';
 import SkillTemplate2 from '@/components/SkillTemplate2';
-import { ArrowRightCircle, Download, Globe } from 'iconoir-react';
+import { ArrowRightCircle, Download } from 'iconoir-react';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
@@ -10,34 +10,34 @@ export default function Home() {
 
     return (
         <div>
-            <div className='flex flex-row justify-between items-center gap-10 mx-20'>
-                <div className='h-[50rem] w-full flex flex-row justify-between mt-32'>
-                    <div className='flex flex-col w-1/2 gap-16 mx-20'>
+            <div className='flex flex-row justify-between gap-10 max-w-screen-xl mx-auto mb-10 md:mb-32'>
+                <div className='xl:h-[45rem] w-full grid grid-cols-1 lg:grid-cols-2 gap-y-10 md:gap-y-20 sm:mt-24 md:mt-32'>
+                    <div className='lg:mx-10 space-y-14 animate-slideInLeft'>
                         <div>
-                            <div className='text-gray-400 text-8xl font-bold flex flex-row gap-6'>
-                                {/* <div className='animate-wiggle'>👋</div> */}
-                                <span>Hello!</span>
-                            </div>
-                            <div className='indent-20 text-4xl font-bold text-primary pt-4 hue-rotate-15'>
+                            <span className='w-full text-gray-400 text-3xl sm:text-5xl lg:text-7xl font-bold flex flex-row gap-6'>
+                                Hello!
+                            </span>
+                            <div className='w-full lg:indent-16 text-xl md:text-3xl xl:text-4xl font-bold text-primary pt-4'>
                                 I'm Meychin Lim
                             </div>
-                            <div className='text-2xl font-bold pt-4 hue-rotate-15'>
+                            <div className='w-full text-lg md:text-2xl font-bold pt-4'>
                                 A Software Developer
                             </div>
                         </div>
-                        <div>
-                            <button
+                        <div className='animate-[bounce_1500ms_ease-in-out_infinite]'>
+                            <a
+                                // href='/cv.pdf'
                                 className='btn btn-accent'
-                                onClick={() => router.push('/contact')}
+                                download
                             >
                                 <Download />
                                 Download CV
-                            </button>
+                            </a>
                         </div>
                     </div>
 
-                    <div className='w-1/2 text-lg space-y-6'>
-                        <div className='w-[30rem] indent-10'>
+                    <div className='text-base lg:text-lg space-y-6 animate-slideInUp'>
+                        <div className='indent-10'>
                             I'm a quick learner, self-motivated, flexible, and
                             reliable software developer with more than 2 years
                             of experience writing, reviewing and fixing code
@@ -48,7 +48,7 @@ export default function Home() {
                         </div>
                         <div>
                             <button
-                                className='btn btn-link text-accent btn-sm px-0'
+                                className='btn btn-link text-accent btn-sm px-0 hover:translate-x-6 duration-500'
                                 onClick={() => router.push('/contact')}
                             >
                                 Contact Me
@@ -59,16 +59,16 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-32 items-center justify-between mx-auto max-w-5xl'>
-                <div className='grid grid-cols-1 gap-y-10'>
-                    <label className='flex text-5xl font-semibold justify-center w-full'>
+            <div className='flex flex-col gap-5 md:gap-32 items-center justify-between mx-auto max-w-5xl'>
+                <div className='grid grid-cols-1 gap-y-5 md:gap-y-10'>
+                    <label className='flex text-3xl lg:text-5xl font-semibold justify-center w-full'>
                         Skills
                     </label>
                     <SkillTemplate2 />
                 </div>
 
-                <div className='grid grid-cols-1 gap-y-10'>
-                    <label className='flex text-5xl font-semibold justify-center w-full'>
+                <div className='grid grid-cols-1 gap-y-5 md:gap-y-10'>
+                    <label className='flex text-3xl lg:text-5xl font-semibold justify-center w-full'>
                         Latest Project
                     </label>
                     <ProjectCard />

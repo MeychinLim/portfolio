@@ -19,11 +19,11 @@ function ProjectCard() {
     };
 
     return (
-        <div className='group grid grid-cols-2 gap-10 rounded-2xl'>
+        <div className='group grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 rounded-2xl'>
             <div className='group-hover:scale-105 transition-transform duration-700'>
                 <img src={`/cover2.png`} className='rounded-2xl' />
             </div>
-            <div className='flex flex-col justify-between space-y-4 py-6'>
+            <div className='flex flex-col justify-between space-y-4 py-2 px-4 md:py-6 md:px-0'>
                 <div className='space-y-4 transition-transform duration-700 translate-x-0 group-hover:translate-x-6 '>
                     <strong className='text-warning'>{project?.name}</strong>
                     <div className='text-sm w-4/5'>
