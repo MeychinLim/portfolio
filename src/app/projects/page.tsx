@@ -12,7 +12,7 @@ function Page() {
             status: 'Completed',
             descriptions:
                 'This project have website and admin. This website help agency to post their properties and detail information from the owner of the properties. For the Admin Web application, we have lots of modules to manage all information related to properties such as Properties, News, Advertisements,...',
-            preImage: null,
+            preImage: 'projects/kh25/kh25-home-preview.png',
             companyName: 'APPA',
             technologies: ['NuxtJS 2, Laravel']
         },
@@ -42,7 +42,7 @@ function Page() {
             status: 'Completed',
             descriptions:
                 'This project display all countries in the world as a list using REST API from https://restcountries.com/.',
-            preImage: null,
+            preImage: 'projects/country-catalog/country-catalog.png',
             companyName: 'Personal',
             technologies: ['NuxtJs 3']
         },
@@ -83,7 +83,14 @@ function Page() {
                             }
                         >
                             <figure>
-                                <img src='/cover2.png' alt='Shoes' />
+                                <img
+                                    src={
+                                        project?.preImage
+                                            ? project?.preImage
+                                            : '/cover2.png'
+                                    }
+                                    alt='Shoes'
+                                />
                             </figure>
                             <div className='card-body p-6 gap-4'>
                                 <h2 className='card-title'>
