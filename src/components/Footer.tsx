@@ -3,7 +3,7 @@ import SocialMedia from './SocialMedia';
 
 function Footer() {
     return (
-        <div className='w-full font-mono'>
+        <div className='w-full'>
             <footer className='footer footer-center p-10 bg-gray-400/10 rounded'>
                 <div className='block md:hidden'>
                     <SocialMedia />

@@ -23,7 +23,7 @@ function Navbar() {
     }
 
     return (
-        <nav className='sticky top-0 w-full font-mono shadow-lg z-50 text-white'>
+        <nav className='sticky top-0 w-full shadow-lg z-50 text-white'>
             <div className='navbar bg-neutral hidden md:flex'>
                 <div className='navbar-start'>
                     <Link
