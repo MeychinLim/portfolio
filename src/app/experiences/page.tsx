@@ -15,16 +15,14 @@ function Page() {
                 'ReactJs',
                 'NextJs',
                 'SpringBoot',
-                // 'Java',
                 'Flutter'
             ],
             responsibilities: [
-                'Implement new feature base on client requirement.',
+                'Develop new in-house projects using ReactJs, TypeScript, Java Spring Boot, and Flutter.',
+                'Migrate old projects to new platform.',
+                'Implement new feature base on task assigned by Team Leader.',
                 'Create responsive UI using ReactJs & PrimeReact.',
-                'Develop both mobile application and web application.',
-                'Learn new skills like Flutter, Java Spring Boot, ReactJs and TypeScript.',
-                'Review merge request assigned by Team Leader.',
-                'Testing and debugging.',
+                'Test and debug.',
                 'Do research and update project document.'
             ]
         },

@@ -15,8 +15,8 @@ function Page() {
     return (
         <div className='mt-10 h-full'>
             <div className='flex justify-center place-content-center items-center h-full lg:my-20 xl:my-44 animate-float'>
-                <div className='bg-gray-900/70 rounded-box p-6 md:p-14'>
-                    <div className='pb-4'>CONTACT</div>
+                <div className='bg-gray-900/70 rounded-box px-8 py-10 md:p-14'>
+                    <div className='text-xl md:text-2xl pb-4'>CONTACT</div>
                     <div className='p-4 flex flex-row gap-3 group'>
                         <Phone className='duration-500 text-primary/75 group-hover:scale-125' />
                         <a

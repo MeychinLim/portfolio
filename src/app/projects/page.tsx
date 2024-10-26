@@ -101,7 +101,7 @@ function Page() {
                                         {project?.status}
                                     </div>
                                 </h2>
-                                <p className='text-sm'>
+                                <p className='text-sm md:text-base'>
                                     {project?.descriptions.substring(0, 100)}{' '}
                                     ...
                                 </p>

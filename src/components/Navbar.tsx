@@ -28,7 +28,7 @@ function Navbar() {
                 <div className='navbar-start'>
                     <Link
                         href='/'
-                        className='text-xl p-4 hover:text-primary'
+                        className='text-2xl p-4 hover:text-primary'
                         onClick={() => setActiveMenu('')}
                     >
                         Portfolio
@@ -39,7 +39,7 @@ function Navbar() {
                         {menuItem.map((item, index) => (
                             <li key={index}>
                                 <div
-                                    className={`duration-500 py-2 px-4 rounded-lg ${activeMenu === item?.name ? 'bg-accent text-black hover:bg-accent' : 'hover:bg-accent/50'}`}
+                                    className={`text-base duration-500 py-2 px-4 rounded-lg ${activeMenu === item?.name ? 'bg-accent hover:bg-accent' : 'hover:bg-accent/50'}`}
                                     onClick={() =>
                                         handleActiveMenu(item?.name, item?.path)
                                     }

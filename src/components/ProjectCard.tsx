@@ -25,11 +25,11 @@ function ProjectCard() {
             </div>
             <div className='flex flex-col justify-between space-y-4 py-2 px-4 md:py-6 md:px-0'>
                 <div className='space-y-4 transition-transform duration-700 translate-x-0 group-hover:translate-x-6 '>
-                    <strong className='text-warning'>{project?.name}</strong>
-                    <div className='text-sm w-4/5'>
-                        <small>
-                            {project?.descriptions.substring(0, 100)} ...
-                        </small>
+                    <strong className='text-2xl text-warning'>
+                        {project?.name}
+                    </strong>
+                    <div className='w-4/5'>
+                        {project?.descriptions.substring(0, 100)} ...
                     </div>
                 </div>
                 <div className='transition-transform duration-700 translate-x-0 group-hover:translate-x-6'>
