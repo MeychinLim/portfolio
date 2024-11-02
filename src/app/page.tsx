@@ -1,9 +1,8 @@
-'use client';
-
-import ProjectCard from '@/components/ProjectCard';
-import SkillTemplate2 from '@/components/SkillTemplate2';
-import { ArrowRightCircle, Download } from 'iconoir-react';
-import { useRouter } from 'next/navigation';
+"use client";
+import ProjectCard from "@/components/ProjectCard";
+import SkillTemplate2 from "@/components/SkillTemplate2";
+import { ArrowRightCircle, Download } from "iconoir-react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
     const router = useRouter();
@@ -18,7 +17,7 @@ export default function Home() {
                                 Hello!
                             </span>
                             <div className='w-full lg:indent-16 text-xl md:text-3xl xl:text-4xl font-bold text-primary pt-4'>
-                                I'm Meychin Lim
+                                I am Meychin Lim
                             </div>
                             <div className='w-full text-lg md:text-2xl font-bold pt-4'>
                                 A Software Developer
@@ -38,7 +37,7 @@ export default function Home() {
 
                     <div className='text-base lg:text-lg space-y-6 animate-slideInUp'>
                         <div className='indent-10'>
-                            I'm a quick learner, self-motivated, flexible, and
+                            I am a quick learner, self-motivated, flexible, and
                             reliable software developer with more than 2 years
                             of experience writing, reviewing and fixing code
                             seeking for opportunities to challenges. Coming with
@@ -49,7 +48,7 @@ export default function Home() {
                         <div>
                             <button
                                 className='btn btn-link text-accent btn-sm px-0 hover:translate-x-6 duration-500'
-                                onClick={() => router.push('/contact')}
+                                onClick={() => router.push("/contact")}
                             >
                                 Contact Me
                                 <ArrowRightCircle />

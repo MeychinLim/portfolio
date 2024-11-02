@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 
 type Props = {
     params: { id: string };
@@ -20,48 +21,49 @@ type Project = {
 function Page({ params }: Props) {
     const [project, setProject] = useState<Project | undefined>();
 
-    const projects: Project[] = [
-        {
-            id: '1',
-            name: 'E-commerce Website',
-            status: 'New',
-            descriptions:
-                'Lorem ipsum dolor sit amet ipsum dolor et. Amet sit et hendrerit ut diam diam diam aliquyam nostrud vero amet exerci. Amet ut ea lorem ut. Kasd dolores ipsum eos. Enim wisi ea ut duis accusam consequat duo iriure nonumy gubergren dolore ad sed sed lorem sit. Veniam aliquyam duo aliquyam nulla sanctus stet rebum. Sadipscing labore sanctus eos eirmod nibh nonumy dolor consequat vel aliquyam voluptua nibh dignissim at dolor diam dolores gubergren.',
-            preImage: null,
-            companyName: 'APPA',
-            rating: '',
-            technologies: ['TypeScript', 'NextJS']
-        },
-        {
-            id: '2',
-            name: 'Countries List Fetching',
-            status: 'New',
-            descriptions:
-                'Lorem ipsum dolor sit amet ipsum dolor et. Amet sit et hendrerit ut diam diam diam aliquyam nostrud vero amet exerci. Amet ut ea lorem ut. Kasd dolores ipsum eos. Enim wisi ea ut duis accusam consequat duo iriure nonumy gubergren dolore ad sed sed lorem sit. Veniam aliquyam duo aliquyam nulla sanctus stet rebum. Sadipscing labore sanctus eos eirmod nibh nonumy dolor consequat vel aliquyam voluptua nibh dignissim at dolor diam dolores gubergren.',
-            preImage: null,
-            companyName: 'APPA',
-            rating: '',
-            technologies: ['NuxtJS 3']
-        },
-        {
-            id: '3',
-            name: 'UPS for Coffee Shop',
-            status: 'New',
-            descriptions:
-                'Lorem ipsum dolor sit amet ipsum dolor et. Amet sit et hendrerit ut diam diam diam aliquyam nostrud vero amet exerci. Amet ut ea lorem ut. Kasd dolores ipsum eos. Enim wisi ea ut duis accusam consequat duo iriure nonumy gubergren dolore ad sed sed lorem sit. Veniam aliquyam duo aliquyam nulla sanctus stet rebum. Sadipscing labore sanctus eos eirmod nibh nonumy dolor consequat vel aliquyam voluptua nibh dignissim at dolor diam dolores gubergren.',
-            preImage: null,
-            companyName: 'APPA',
-            rating: '',
-            technologies: ['NuxtJs 3', 'Laravel']
-        }
-    ];
+    const projects = useMemo(
+        () => [
+            {
+                id: "1",
+                name: "E-commerce Website",
+                status: "New",
+                descriptions:
+                    "Lorem ipsum dolor sit amet ipsum dolor et. Amet sit et hendrerit ut diam diam diam aliquyam nostrud vero amet exerci. Amet ut ea lorem ut. Kasd dolores ipsum eos. Enim wisi ea ut duis accusam consequat duo iriure nonumy gubergren dolore ad sed sed lorem sit. Veniam aliquyam duo aliquyam nulla sanctus stet rebum. Sadipscing labore sanctus eos eirmod nibh nonumy dolor consequat vel aliquyam voluptua nibh dignissim at dolor diam dolores gubergren.",
+                preImage: null,
+                companyName: "APPA",
+                rating: "",
+                technologies: ["TypeScript", "NextJS"]
+            },
+            {
+                id: "2",
+                name: "Countries List Fetching",
+                status: "New",
+                descriptions:
+                    "Lorem ipsum dolor sit amet ipsum dolor et. Amet sit et hendrerit ut diam diam diam aliquyam nostrud vero amet exerci. Amet ut ea lorem ut. Kasd dolores ipsum eos. Enim wisi ea ut duis accusam consequat duo iriure nonumy gubergren dolore ad sed sed lorem sit. Veniam aliquyam duo aliquyam nulla sanctus stet rebum. Sadipscing labore sanctus eos eirmod nibh nonumy dolor consequat vel aliquyam voluptua nibh dignissim at dolor diam dolores gubergren.",
+                preImage: null,
+                companyName: "APPA",
+                rating: "",
+                technologies: ["NuxtJS 3"]
+            },
+            {
+                id: "3",
+                name: "UPS for Coffee Shop",
+                status: "New",
+                descriptions:
+                    "Lorem ipsum dolor sit amet ipsum dolor et. Amet sit et hendrerit ut diam diam diam aliquyam nostrud vero amet exerci. Amet ut ea lorem ut. Kasd dolores ipsum eos. Enim wisi ea ut duis accusam consequat duo iriure nonumy gubergren dolore ad sed sed lorem sit. Veniam aliquyam duo aliquyam nulla sanctus stet rebum. Sadipscing labore sanctus eos eirmod nibh nonumy dolor consequat vel aliquyam voluptua nibh dignissim at dolor diam dolores gubergren.",
+                preImage: null,
+                companyName: "APPA",
+                rating: "",
+                technologies: ["NuxtJs 3", "Laravel"]
+            }
+        ],
+        []
+    );
 
     useEffect(() => {
         const project = projects.find((project) => project?.id === params?.id);
-        console.log(params?.id);
-
         if (!!project) setProject(project);
-    }, [params?.id]);
+    }, [params?.id, projects, setProject]);
 
     return (
         <div className='max-w-6xl mx-auto'>
@@ -92,15 +94,19 @@ function Page({ params }: Props) {
 
             <div className='rounded-xl bg-gradient-to-r from-accent to-green-200'>
                 <div className='px-6 md:px-14 translate-y-6 md:translate-y-14'>
-                    <img
+                    <Image
                         src='/cover2.png'
                         alt='Shoes'
                         className='rounded-xl mb-6 md:mb-14'
+                        width={1000}
+                        height={100}
                     />
-                    <img
+                    <Image
                         src='/cover2.png'
                         alt='Shoes'
                         className='rounded-xl mb-6 md:mb-14'
+                        width={1000}
+                        height={100}
                     />
                 </div>
             </div>
