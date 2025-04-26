@@ -1,11 +1,13 @@
-'use client';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import ScrollToTop from '@/components/ScrollToTop';
-import SocialMedia from '@/components/SocialMedia';
-import { useThemeStore } from '@/zustand/themeStore';
+"use client";
+// import Footer from "@/components/Footer";
+// import Navbar from "@/components/Navbar";
+// import ScrollToTop from "@/components/ScrollToTop";
+import SecondLayoutNavbar from "@/components/SecondLayout/SecondLayoutNavbar";
+// import SocialMedia from "@/components/SocialMedia";
+import { useThemeStore } from "@/zustand/themeStore";
+// import Image from "next/image";
 // import { Inter } from 'next/font/google';
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -18,16 +20,11 @@ export default function RootLayout({
 
     return (
         <html lang='en' data-theme={theme}>
-            <body className='exo-2'>
-                <div className='hidden md:block'>
-                    <SocialMedia />
+            <body className='exo-2 h-screen w-screen'>
+                <div className='flex h-full'>
+                    <main className='flex-1'>{children}</main>
+                    <SecondLayoutNavbar />
                 </div>
-                <ScrollToTop />
-                <Navbar />
-                <main className='exo-2 text-2xl p-4 md:pt-4 md:mb-24 md:mt-10 text-gray-400 min-h-[72vh]'>
-                    {children}
-                </main>
-                <Footer />
             </body>
         </html>
     );
