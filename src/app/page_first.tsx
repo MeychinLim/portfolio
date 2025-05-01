@@ -1,6 +1,7 @@
 "use client";
-import ProjectCard from "@/components/ProjectCard";
-import SkillTemplate2 from "@/components/SkillTemplate2";
+
+import ProjectCard from "@/components/FirstLayoutTheme/ProjectCard";
+import SkillTemplate2 from "@/components/FirstLayoutTheme/SkillTemplate2";
 import { ArrowRightCircle, Download } from "iconoir-react";
 import { useRouter } from "next/navigation";
 

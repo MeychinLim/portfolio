@@ -1,15 +1,10 @@
 "use client";
-// import Footer from "@/components/Footer";
-// import Navbar from "@/components/Navbar";
-// import ScrollToTop from "@/components/ScrollToTop";
-import SecondLayoutNavbar from "@/components/SecondLayout/SecondLayoutNavbar";
-// import SocialMedia from "@/components/SocialMedia";
+import Footer from "@/components/FirstLayoutTheme/Footer";
+import ScrollToTop from "@/components/FirstLayoutTheme/ScrollToTop";
+import SecondNavbar from "@/components/SecondLayoutTheme/SecondNavbar";
+import SecondLayoutNavbar from "@/components/SecondLayoutTheme/SecondNavbar";
 import { useThemeStore } from "@/zustand/themeStore";
-// import Image from "next/image";
-// import { Inter } from 'next/font/google';
 import "../styles/globals.css";
-
-// const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
     children
@@ -20,10 +15,12 @@ export default function RootLayout({
 
     return (
         <html lang='en' data-theme={theme}>
-            <body className='exo-2 h-screen w-screen'>
-                <div className='flex h-full'>
+            <body className='exo-2'>
+                <div className='flex flex-col min-h-screen'>
+                    <SecondNavbar />
                     <main className='flex-1'>{children}</main>
-                    <SecondLayoutNavbar />
+                    <ScrollToTop />
+                    <Footer />
                 </div>
             </body>
         </html>

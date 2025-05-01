@@ -1,8 +1,8 @@
-import { GithubCircle, Linkedin, Telegram } from 'iconoir-react';
+import { GithubCircle, Linkedin, Telegram } from "iconoir-react";
 
 function SocialMedia() {
     return (
-        <div className='md:fixed top-96 right-10 z-50'>
+        <div className='md:fixed top-1/3 right-10 z-50'>
             <div className='flex flex-row md:flex-col gap-4'>
                 <a href='https://t.me/meychinlim' target='_blank'>
                     <Telegram className='w-10 h-10 hover:text-accent hover:scale-125 transition-transform duration-500 block' />

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 // import ThemeController from './ThemeController';
 
-function SecondLayoutNavbar() {
+function SecondNavbar() {
     const router = useRouter();
     const activeMenu = useMenuStore((state: any) => state.activeMenu);
     const setActiveMenu = useMenuStore((state: any) => state.setActiveMenu);
@@ -29,8 +29,10 @@ function SecondLayoutNavbar() {
                 <HomeSimple />
             </div>
             <div className='flex flex-col gap-20 justify-center text-xs sm:text-sm md:text-base'>
-                {menuItems.map((item) => (
-                    <div className='rotate-90 text-center'>{item?.name}</div>
+                {menuItems.map((item, index) => (
+                    <div key={index} className='rotate-90 text-center'>
+                        {item?.name}
+                    </div>
                 ))}
             </div>
 
@@ -39,4 +41,4 @@ function SecondLayoutNavbar() {
     );
 }
 
-export default SecondLayoutNavbar;
+export default SecondNavbar;

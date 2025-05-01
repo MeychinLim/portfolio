@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useMenuStore } from '@/zustand/menuStore';
-import { HomeSimpleDoor } from 'iconoir-react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import ThemeController from './ThemeController';
+import { useMenuStore } from "@/zustand/menuStore";
+import { HomeSimpleDoor } from "iconoir-react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import ThemeController from "./ThemeController";
 
 function Navbar() {
     const router = useRouter();
@@ -12,9 +12,9 @@ function Navbar() {
     const setActiveMenu = useMenuStore((state: any) => state.setActiveMenu);
 
     const menuItem = [
-        { name: 'Projects', path: '/projects' },
-        { name: 'Experiences', path: '/experiences' },
-        { name: 'Contact', path: '/contact' }
+        { name: "Projects", path: "/projects" },
+        { name: "Experiences", path: "/experiences" },
+        { name: "Contact", path: "/contact" }
     ];
 
     function handleActiveMenu(name: string, path: string) {
@@ -29,7 +29,7 @@ function Navbar() {
                     <Link
                         href='/'
                         className='text-2xl p-4 hover:text-primary'
-                        onClick={() => setActiveMenu('')}
+                        onClick={() => setActiveMenu("")}
                     >
                         Portfolio
                     </Link>
@@ -39,7 +39,7 @@ function Navbar() {
                         {menuItem.map((item, index) => (
                             <li key={index}>
                                 <div
-                                    className={`text-base duration-500 py-2 px-4 rounded-lg ${activeMenu === item?.name ? 'bg-accent hover:bg-accent' : 'hover:bg-accent/50'}`}
+                                    className={`text-base duration-500 py-2 px-4 rounded-lg ${activeMenu === item?.name ? "bg-accent hover:bg-accent" : "hover:bg-accent/50"}`}
                                     onClick={() =>
                                         handleActiveMenu(item?.name, item?.path)
                                     }
@@ -55,14 +55,14 @@ function Navbar() {
                 </div>
             </div>
             <div className='bg-neutral flex justify-between items-center px-4 py-2 md:hidden'>
-                <div onClick={() => handleActiveMenu('Home', '/')}>
+                <div onClick={() => handleActiveMenu("Home", "/")}>
                     <HomeSimpleDoor className='w-5 h-5 m-2' />
                 </div>
                 <ul className='menu menu-horizontal'>
                     <li
                         className='p-2'
                         onClick={() =>
-                            handleActiveMenu('Projects', '/projects')
+                            handleActiveMenu("Projects", "/projects")
                         }
                     >
                         Project
@@ -70,14 +70,14 @@ function Navbar() {
                     <li
                         className='p-2'
                         onClick={() =>
-                            handleActiveMenu('Experiences', '/experiences')
+                            handleActiveMenu("Experiences", "/experiences")
                         }
                     >
                         Experience
                     </li>
                     <li
                         className='p-2'
-                        onClick={() => handleActiveMenu('Contact', '/contact')}
+                        onClick={() => handleActiveMenu("Contact", "/contact")}
                     >
                         Context
                     </li>

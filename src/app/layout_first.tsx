@@ -1,8 +1,8 @@
 "use client";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import ScrollToTop from "@/components/ScrollToTop";
-import SocialMedia from "@/components/SocialMedia";
+import Footer from "@/components/FirstLayoutTheme/Footer";
+import Navbar from "@/components/FirstLayoutTheme/Navbar";
+import ScrollToTop from "@/components/FirstLayoutTheme/ScrollToTop";
+import SocialMedia from "@/components/FirstLayoutTheme/SocialMedia";
 import { useThemeStore } from "@/zustand/themeStore";
 // import { Inter } from 'next/font/google';
 import "../styles/globals.css";
